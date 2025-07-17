@@ -7,7 +7,7 @@ const Card = ({ nombre, precio, descripcion, imagen }) => {
       <img src={imagen} alt={nombre} className="card-img" />
       <h3> Producto:{nombre}</h3>
       <p><strong>Precio:</strong> ${precio}</p>
-      <p>{descripcion}</p>
+      <p>{descripcion}</p>   // se utilizan los emails como descripciones 
     </div>
   );
 };

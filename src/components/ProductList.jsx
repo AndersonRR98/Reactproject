@@ -10,7 +10,7 @@ const ProductList = () => {
     fetch('https://dummyjson.com/users')
       .then(res => res.json())
       .then(data => {
-        setProductos(data.users); // Correcto: usuarios como productos
+        setProductos(data.users); // se usa usuarios como productos 
       });
   }, []);
 
