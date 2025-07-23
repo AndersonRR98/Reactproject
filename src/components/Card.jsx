@@ -1,14 +1,26 @@
-import React from 'react';
-import './Card.css';
-
-const Card = ({ nombre, precio, descripcion, imagen }) => {
+const Card = ({ id, nombre, precio, descripcion, imagen, addToCart }) => {
   return (
-    <div className="card">
-      <img src={imagen} alt={nombre} className="card-img" />
-      <h3> Producto:{nombre}</h3>
-      <p><strong>Precio:</strong> ${precio}</p>
-      <p>{descripcion}</p>   // se utilizan los emails como descripciones 
-    </div>
+   <div className="card">
+  {/* Imagen del producto */}
+  <img src={imagen} alt={nombre} className="card-img" />
+  
+  {/* Nombre destacado */}
+  <h3>Producto: {nombre}</h3>
+  
+  {/* Precio */}
+  <p><strong>Precio:</strong> ${precio}</p>
+  
+  {/* Descripción */}
+  <p>{descripcion}</p>
+  
+  {/* Botón de acción */}
+  <button 
+    onClick={() => addToCart({ id, nombre, precio, imagen })}
+    className="add-to-cart-button"
+  >
+    Añadir al Carrito
+  </button>
+</div>
   );
 };
 
